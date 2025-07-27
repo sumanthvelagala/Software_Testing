@@ -1,0 +1,43 @@
+#!/bin/bash
+
+#Example of test case
+#java -jar CSE565P1.jar Peter 24 Returning Silver Spring Electronics 5
+#ADD TEST CASES BELOW
+java -jar CSE565P1.jar Levi 30 Returning	Silver	Spring	Electronics	5
+java -jar CSE565P1.jar sam1234	18	new	Gold	Winter	Electronics	10
+java -jar CSE565P1.jar hemanth	19	new	Bronze	summer	Unknown	9
+java -jar CSE565P1.jar sumanthredd	50	Returning	Bronze	Spring	Electronics	8
+java -jar CSE565P1.jar samuel-	43	Returning	Bronze	Spring	Electronics	8
+java -jar CSE565P1.jar jacob_ 50 Returning	Bronze	Spring	Electronics	8
+java -jar CSE565P1.jar Sandeep	17	New	Silver	Summer	Unknown	5
+java -jar CSE565P1.jar Praneeth	20	New	Bronze	Spring	Electronics	0
+java -jar CSE565P1.jar Suresh	59	Returning	Silver	Summer	Unknown	11
+
+java -jar CSE565P1.jar Neelson	70	Returning	Gold	Summer	Electronics	5
+java -jar CSE565P1.jar Sahana	45	Returning	Gold	Summer	Unknown	3
+java -jar CSE565P1.jar Rohan	24	Returning	Silver	Summer	Electronics	8
+java -jar CSE565P1.jar Maria	69	Returning	Silver	Summer	Unknown	9
+java -jar CSE565P1.jar Kiran	23	Returning	Bronze	Summer	Electronics	5
+java -jar CSE565P1.jar Nashit	65	Returning	Bronze	Summer	Unknown	2
+java -jar CSE565P1.jar Avianna	76	Returning	Gold	Spring	Electronics	1
+java -jar CSE565P1.jar Ishan	34	Returning	Gold	Spring	Unknown	10
+java -jar CSE565P1.jar Leena	54	Returning	Silver	Spring	Electronics	6
+java -jar CSE565P1.jar Kavya	75	Returning	Silver	Spring	Unknown	4
+java -jar CSE565P1.jar Zandeya	23	Returning	Bronze	Spring	Electronics	3
+java -jar CSE565P1.jar Aryan	26	Returning	Bronze	Spring	Unknown	7
+java -jar CSE565P1.jar Jayesh	29	Returning	Gold	Winter	Electronics	10
+java -jar CSE565P1.jar Eshaan	52	Returning	Gold	Winter	Unknown	1
+java -jar CSE565P1.jar Alexander 49	Returning	Silver	Winter	Electronics	5
+java -jar CSE565P1.jar Virat	34	Returning	Silver	Winter	Unknown	3
+java -jar CSE565P1.jar Maaya	41	Returning	Bronze	Winter	Electronics	2
+java -jar CSE565P1.jar Devon	59	Returning	Bronze	Winter	Unknown	7
+java -jar CSE565P1.jar Linda	36	Returning	Gold	Fall	Electronics	5
+java -jar CSE565P1.jar Manogna	27	Returning	Gold	Fall	Unknown	4
+java -jar CSE565P1.jar Abijay	47	Returning	Silver	Fall	Electronics	8
+java -jar CSE565P1.jar Divyatej	66	Returning	Silver	Fall	Unknown	9
+java -jar CSE565P1.jar Gayathri	65	Returning	Bronze	Fall	Electronics	4
+java -jar CSE565P1.jar Ruchitha	36	Returning	Bronze	Fall	Unknown	2
+java -jar CSE565P1.jar Black	33	New	Bronze	Fall	Electronics	5
+java -jar CSE565P1.jar Mariam	69	Returning	Silver	Summer	Unknown	9
+
+java -jar CSE565P1.jar Neelson	70	Returning	Gold	Summer	Electronics	5
