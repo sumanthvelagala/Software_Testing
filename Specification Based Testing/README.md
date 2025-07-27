@@ -19,7 +19,14 @@ project1GUI.jar	- GUI version of the same application
 Project1Script	- Bash script to run test cases automatically
 Specification Based Testing_TestCaseSpreadsheet.xlsx	- Test cases, description of defects found
 
+# How to Run
 
+Command-line (manual) - java -jar CSE565P1.jar <name> <age> <user status> <reward status> <season> <category> <rating>
+
+Script (batch)
+
+Make it executable: chmod u+x Project1Script
+Run the script: ./Project1Script
 # Summary
 
 - Tested input constraints, discount logic, and validation rules.
