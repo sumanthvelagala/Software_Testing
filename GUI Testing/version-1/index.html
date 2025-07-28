@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grocery Tracker - Home</title>
+  <style>
+    body {
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      background-color: #f9f9f9;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      width: 400px;
+    }
+    img {
+      width: 300px; /* Size change */
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .form-elements {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center; /* Location change using flexbox */
+    }
+    .button-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px; /* Orientation change */
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Grocery Expense Tracker</h1>
+    <img src="1.webp" alt="Groceries Image">
+
+    <div class="form-elements">
+      <label>Enter your name:</label>
+      <input type="text" />
+
+      <input type="checkbox" id="remember">
+      <label for="remember">Remember Me</label>
+
+      <label for="budget">Monthly Grocery Budget</label>
+      <input type="range" id="budget" min="0" max="10000">
+    </div>
+
+    <div class="button-group">
+      <button onclick="location.href='add.html'">Add Grocery</button>
+      <button onclick="location.href='summary.html'">View Summary</button>
+    </div>
+  </div>
+</body>
+</html>

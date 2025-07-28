@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grocery Summary - Version 2</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+
+    img {
+      width: 150px;
+      height: auto;
+    }
+
+    .scrollbox {
+      width: 50%;
+      height: 200px;
+      overflow-y: scroll;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .filter-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+
+    .top-nav {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Location Change: Move button to top-right -->
+  <div class="top-nav">
+    <button onclick="location.href='add.html'">➕ Add New Item</button>
+  </div>
+
+  <h2>Grocery Summary</h2>
+  <img src="1.webp" alt="Summary Image"><br><br>
+
+  <!-- Orientation Change: Filters in horizontal layout -->
+  <div class="filter-container">
+    <div>
+      <label>Filter by Date:</label><br>
+      <input type="date" id="dateFilter">
+    </div>
+    <div>
+      <input type="checkbox" id="fruits"><label for="fruits"> Fruits</label><br>
+      <input type="checkbox" id="veggies"><label for="veggies"> Vegetables</label>
+    </div>
+  </div>
+
+  <button onclick="applyFilters()">Apply Filters</button>
+  <button onclick="clearFilters()">Clear Filters</button>
+  <button onclick="clearAll()">Clear All Items</button><br><br>
+
+  <!-- Size Change: Enlarged scrollbox -->
+  <div class="scrollbox"></div><br>
+
+  <!-- Optional: Add a button to return to summary if needed -->
+  <!-- <button onclick="location.href='summary.html'">Reload Summary</button> -->
+  <button type="button" onclick="location.href='index.html'">Home</button>
+
+  <script>
+    function displayGroceries(groceries) {
+      const box = document.querySelector(".scrollbox");
+      box.innerHTML = groceries.length 
+        ? groceries.map(item => `<p>${item.name} - ${item.quantity} (${item.department}) [${item.date}]</p>`).join('')
+        : '<p>No items to display.</p>';
+    }
+
+    function applyFilters() {
+      const all = JSON.parse(localStorage.getItem("groceries")) || [];
+      const dateFilter = document.getElementById("dateFilter").value;
+      const fruits = document.getElementById("fruits").checked;
+      const veggies = document.getElementById("veggies").checked;
+      const filtered = all.filter(item => {
+        let ok = true;
+        if (dateFilter) ok = item.date === dateFilter;
+        if (fruits && item.department !== "Fruits") ok = false;
+        if (veggies && item.department !== "Vegetables") ok = false;
+        if (fruits && veggies) ok = ["Fruits","Vegetables"].includes(item.department);
+        return ok;
+      });
+      displayGroceries(filtered);
+    }
+
+    function clearFilters() {
+      document.getElementById("dateFilter").value = '';
+      document.getElementById("fruits").checked = false;
+      document.getElementById("veggies").checked = false;
+      displayGroceries(JSON.parse(localStorage.getItem("groceries")) || []);
+    }
+
+    function clearAll() {
+      localStorage.removeItem("groceries");
+      displayGroceries([]);
+    }
+
+    window.onload = function() {
+      displayGroceries(JSON.parse(localStorage.getItem("groceries")) || []);
+    }
+  </script>
+
+</body>
+</html>
